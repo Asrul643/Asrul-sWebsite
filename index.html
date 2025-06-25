@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asrul Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+        
+            <div class="nav-logo">
+                <a href="student.html">
+                <img src="Image/ChatGPT_Image_Jun_3__2025__10_44_53_PM-removebg-preview.png" alt="Logo">
+                </a>
+            </div>
+            
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="profile.html" class="nav-link">Profile</a></li>
+                <li class="nav-item"><a href="education.html" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            
+            <div class="social-icons">
+                <a href="https://www.facebook.com/asrul.affendy.777?mibextid=ZbWKwL" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/asrul_affendy_?igsh=ZHpzd2R6aW5vOXZ1" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="demo-content">
+        <h1>Where Creativity Meets Code</h1>
+        <div class="hero-section">
+            
+            <div class="moving-text-wrapper">
+                <div class="moving-text">ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · ASRUL'S WEBPAGE · </div>
+            </div>
+            <div class="profile-container">
+                <img src="image/WhatsApp_Image_2025-06-04_at_11.23.48_1b538fb0_Nero_AI_Image_Upscaler_Photo_Face-removebg-preview.png" alt="Profile Photo" class="profile-photo">
+                <div class="designer-tag">Designer</div>
+                <div class="coder-tag">&lt;Coder&gt;</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <h2>Hi, My name is Asrul Affendy, but you can call me Asrul.</h2>
+        <p class="tagline">"."</p>
+        <p>Explore my journey as a digital creator, craft with clarity, precision, and hearts.</p>
+
+        <div class="text-section">
+            <div class="text-box">
+                <p class="intro-text">Welcome to my personal portfolio website. Explore my achievements, resume, and content writing samples.</p>
+            </div>
+            <div class="text-box">
+                <p class="profile-invite">Curious to know who I am? Explore my profile and discover what makes this journey worth your click.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Copyright 2020. AsrulAffendy.com. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+
+                mobileToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+
+                
+                window.location.href = link.getAttribute('href');
+            });
+        });
+    </script>
+
+</body>
+</html>
